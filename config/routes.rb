@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
-  root "welcome#index"
+  get 'user/new'
 
-  resources :about_me
+  root "user#index"
+
+  resources :about
   resources :high_schools
 
 end
