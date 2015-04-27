@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
-
-  get 'user/new'
-
-  root "user#index"
-
-  resources :about
+  
+  root "users#index"
+	
+  resources :users
   resources :high_schools
+
+ 	devise_for :users
+
+	get '/about' => 'pages#about'
+	get '/contact' => 'pages#contact'
 
 end
